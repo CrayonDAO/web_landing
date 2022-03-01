@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "NewYorkExtraLarge";
+  font-weight: 900;
+  font-style: normal;
+  src: local("NewYorkExtraLarge-Black"), url("./fonts/NewYorkExtraLarge-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "NewYorkExtraLarge";
+  font-weight: 800;
+  font-style: normal;
+  src: local("NewYorkExtraLarge-Heavy"), url("./fonts/NewYorkExtraLarge-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "NewYorkExtraLarge";
+  font-weight: 700;
+  font-style: normal;
+  src: local("NewYorkExtraLarge-Bold"), url("./fonts/NewYorkExtraLarge-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewYorkExtraLarge";
+  font-weight: 600;
+  font-style: normal;
+  src: local("NewYorkExtraLarge-Semibold"), url("./fonts/NewYorkExtraLarge-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NewYorkExtraLarge";
+  font-weight: 400;
+  font-style: normal;
+  src: local("NewYorkExtraLarge-Regular"), url("./fonts/NewYorkExtraLarge-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF-Compact-Display";
+  font-weight: 900;
+  font-style: normal;
+  src: local("SF-Compact-Display-Black"), url("./fonts/SF-Compact-Display-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF-Compact-Display";
+  font-weight: 800;
+  font-style: normal;
+  src: local("SF-Compact-Display-Heavy"), url("./fonts/SF-Compact-Display-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF-Compact-Display";
+  font-weight: 700;
+  font-style: normal;
+  src: local("SF-Compact-Display-Bold"), url("./fonts/SF-Compact-Display-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF-Compact-Display";
+  font-weight: 600;
+  font-style: normal;
+  src: local("SF-Compact-Display-Semibold"), url("./fonts/SF-Compact-Display-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF-Compact-Display";
+  font-weight: 400;
+  font-style: normal;
+  src: local("SF-Compact-Display-Regular"), url("./fonts/SF-Compact-Display-Regular.otf") format("opentype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+@for $var from 2 through 9 {
+  .fw-#{$var}#{"00"} {
+    font-weight: #{$var}#{"00"};
+  }
+}
+
+$font-size: (8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 24, 27, 28, 30, 31, 32, 36, 40, 44, 48, 50, 52, 55, 56, 80, 96, 97, 99);
+
+@each $var in $font-size {
+  .text-#{$var} {
+    font-size: #{$var}px;
+    &.btn {
+      font-size: #{$var}px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  @each $var in $font-size {
+    .text-lg-#{$var} {
+      font-size: #{$var}px;
+      &.btn {
+        font-size: #{$var}px;
+      }
+    }
+  }
+}
+
+.text-ny {
+  font-family: "NewYorkExtraLarge", "serif";
+  letter-spacing: -0.2px;
+}
+
+.text-sf {
+  font-family: "SF-Compact-Display", "san-serif";
+  letter-spacing: -0.4px;
+}
+
+$line-heights: (125, 135, 154, 160, 165, 170, 175, 180, 200, 225, 280);
+
+@each $var in $line-heights {
+  .lh-#{$var} {
+    line-height: #{$var/100};
+  }
+}
+
+.break-keep {
+  word-break: keep-all !important;
+}
+.break-initial {
+  word-break: initial !important;
+  word-wrap: break-word;
+}
+.underline,
+.text-underline {
+  text-decoration: underline !important;
+}

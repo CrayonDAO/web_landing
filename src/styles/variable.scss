@@ -1,0 +1,27 @@
+$primary: #fefbb3;
+$secondary: #d8fafd;
+$third: #f9bbbc;
+
+$theme-colors: (
+  // 페이지 공통
+  "primary": $primary,
+  "secondary": $secondary,
+  "third": $third,
+  "black": #000,
+  "white": #fff
+) !default;
+
+$container-max-widths: (
+  xs: 350px,
+  sm: 765px,
+  md: 765px,
+  lg: 1247px,
+  xl: 1247px,
+) !default;
+
+.btn-outline-white {
+  &:hover {
+    background-color: #222 !important;
+    color: white !important;
+  }
+}
